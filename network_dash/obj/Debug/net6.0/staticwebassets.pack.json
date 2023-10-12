@@ -1,0 +1,145 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\network_dash.bundle.scp.css",
+      "PackagePath": "staticwebassets\\network_dash.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\css\\material-dashboard.min.css",
+      "PackagePath": "staticwebassets\\css\\material-dashboard.min.css"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\css\\nucleo-icons.css",
+      "PackagePath": "staticwebassets\\css\\nucleo-icons.css"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\css\\nucleo-svg.css",
+      "PackagePath": "staticwebassets\\css\\nucleo-svg.css"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\icons\\flags\\BR.png",
+      "PackagePath": "staticwebassets\\img\\icons\\flags\\BR.png"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\icons\\flags\\DE.png",
+      "PackagePath": "staticwebassets\\img\\icons\\flags\\DE.png"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\icons\\flags\\GB.png",
+      "PackagePath": "staticwebassets\\img\\icons\\flags\\GB.png"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\icons\\flags\\US.png",
+      "PackagePath": "staticwebassets\\img\\icons\\flags\\US.png"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\logo-ct.png",
+      "PackagePath": "staticwebassets\\img\\logo-ct.png"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\products\\product-1-min (1).jpg",
+      "PackagePath": "staticwebassets\\img\\products\\product-1-min (1).jpg"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\products\\product-1-min.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\product-1-min.jpg"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\products\\product-2-min.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\product-2-min.jpg"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\products\\product-3-min.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\product-3-min.jpg"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\small-logos\\bootstrap.svg",
+      "PackagePath": "staticwebassets\\img\\small-logos\\bootstrap.svg"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\small-logos\\creative-tim.svg",
+      "PackagePath": "staticwebassets\\img\\small-logos\\creative-tim.svg"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\small-logos\\devto.svg",
+      "PackagePath": "staticwebassets\\img\\small-logos\\devto.svg"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\small-logos\\github.svg",
+      "PackagePath": "staticwebassets\\img\\small-logos\\github.svg"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\small-logos\\google-webdev.svg",
+      "PackagePath": "staticwebassets\\img\\small-logos\\google-webdev.svg"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\team-3.jpg",
+      "PackagePath": "staticwebassets\\img\\team-3.jpg"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\js\\core\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\core\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\js\\core\\popper.min.js",
+      "PackagePath": "staticwebassets\\js\\core\\popper.min.js"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\js\\material-dashboard.min.js",
+      "PackagePath": "staticwebassets\\js\\material-dashboard.min.js"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\js\\plugins\\chartjs.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\chartjs.min.js"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\js\\plugins\\dragula\\dragula.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\dragula\\dragula.min.js"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\js\\plugins\\jkanban\\jkanban.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\jkanban\\jkanban.js"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\js\\plugins\\material-dashboard.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\material-dashboard.min.js"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\js\\plugins\\perfect-scrollbar.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\perfect-scrollbar.min.js"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\js\\plugins\\smooth-scrollbar.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\smooth-scrollbar.min.js"
+    },
+    {
+      "Id": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\js\\plugins\\world.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\world.js"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.network_dash.props",
+      "PackagePath": "build\\network_dash.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.network_dash.props",
+      "PackagePath": "buildMultiTargeting\\network_dash.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.network_dash.props",
+      "PackagePath": "buildTransitive\\network_dash.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.network_dash.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
