@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using WebApplication1.Models;
+using network_dash.Models;
 
-namespace WebApplication1.Controllers
+namespace network_dash.Controllers
 {
     public class AuthController : Controller
     {

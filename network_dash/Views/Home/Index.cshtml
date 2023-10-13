@@ -312,7 +312,7 @@
 		<div class="card z-index-2">
 			<div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
 				<div class="bg-gradient-warning shadow-warning border-radius-lg py-3 pe-1">
-					<div class="chart">
+					<div class="chart" id="chart-line-parent">
 						<canvas id="chart-line" class="chart-canvas" height="170"></canvas>
 					</div>
 				</div>
@@ -332,87 +332,89 @@
 
 @section Scripts{
 	<script>
-		var ctx2 = document.getElementById("chart-line").getContext("2d");
-		new Chart(ctx2, {
-			type: "line",
-			data: {
-				labels: ["11:56", "12:05", "12:14", "12:23", "12:32", "12:41", "12:50"],
-				datasets: [{
-					label: "Processor Load",
-					tension: 0,
-					borderWidth: 0,
-					pointRadius: 5,
-					pointBackgroundColor: "rgba(255, 255, 255, .8)",
-					pointBorderColor: "transparent",
-					borderColor: "rgba(255, 255, 255, .8)",
-					borderColor: "rgba(255, 255, 255, .8)",
-					borderWidth: 4,
-					backgroundColor: "transparent",
-					fill: true,
-					data: [1.7, 1, 0.7, 1.8, 2.2, 2.4, 1.2],
-					maxBarThickness: 6
+		let cpuUsageMap = (labelInput,dataInput) => {
+			let ctx2 = document.getElementById("chart-line").getContext("2d");
+			new Chart(ctx2, {
+				type: "line",
+				data: {
+					labels: labelInput,
+					datasets: [{
+						label: "Processor Load",
+						tension: 0,
+						borderWidth: 0,
+						pointRadius: 5,
+						pointBackgroundColor: "rgba(255, 255, 255, .8)",
+						pointBorderColor: "transparent",
+						borderColor: "rgba(255, 255, 255, .8)",
+						borderColor: "rgba(255, 255, 255, .8)",
+						borderWidth: 4,
+						backgroundColor: "transparent",
+						fill: true,
+						data: dataInput,
+						maxBarThickness: 6
 
-				}],
-			},
-			options: {
-				responsive: true,
-				maintainAspectRatio: false,
-				plugins: {
-					legend: {
-						display: false,
-					}
+					}],
 				},
-				interaction: {
-					intersect: false,
-					mode: 'index',
-				},
-				scales: {
-					y: {
-						grid: {
-							drawBorder: false,
-							display: true,
-							drawOnChartArea: true,
-							drawTicks: false,
-							borderDash: [5, 5],
-							color: 'rgba(255, 255, 255, .2)'
-						},
-						ticks: {
-							display: true,
-							color: '#f8f9fa',
-							padding: 10,
-							font: {
-								size: 14,
-								weight: 300,
-								family: "Roboto",
-								style: 'normal',
-								lineHeight: 1
-							},
-						}
-					},
-					x: {
-						grid: {
-							drawBorder: false,
+				options: {
+					responsive: true,
+					maintainAspectRatio: false,
+					plugins: {
+						legend: {
 							display: false,
-							drawOnChartArea: false,
-							drawTicks: false,
-							borderDash: [5, 5]
-						},
-						ticks: {
-							display: true,
-							color: '#f8f9fa',
-							padding: 10,
-							font: {
-								size: 14,
-								weight: 300,
-								family: "Roboto",
-								style: 'normal',
-								lineHeight: 1
-							},
 						}
 					},
+					interaction: {
+						intersect: false,
+						mode: 'index',
+					},
+					scales: {
+						y: {
+							grid: {
+								drawBorder: false,
+								display: true,
+								drawOnChartArea: true,
+								drawTicks: false,
+								borderDash: [5, 5],
+								color: 'rgba(255, 255, 255, .2)'
+							},
+							ticks: {
+								display: true,
+								color: '#f8f9fa',
+								padding: 10,
+								font: {
+									size: 14,
+									weight: 300,
+									family: "Roboto",
+									style: 'normal',
+									lineHeight: 1
+								},
+							}
+						},
+						x: {
+							grid: {
+								drawBorder: false,
+								display: false,
+								drawOnChartArea: false,
+								drawTicks: false,
+								borderDash: [5, 5]
+							},
+							ticks: {
+								display: true,
+								color: '#f8f9fa',
+								padding: 10,
+								font: {
+									size: 14,
+									weight: 300,
+									family: "Roboto",
+									style: 'normal',
+									lineHeight: 1
+								},
+							}
+						},
+					},
 				},
-			},
-		});
+			});
+		}
 		// Initialize the vector map
 		var map = new jsVectorMap({
 			selector: "#map",
@@ -460,6 +462,29 @@
 
 		});
 
+	</script>
+
+	<script>
+		$(document).ready(()=>{
+			setInterval(()=>{
+				$.ajax({
+					url: "/api/GetCpuUsage",
+					success: (result) => {
+						let labels = [];
+						let datas = [];
+						result.forEach((x)=>{
+							labels.push(x.sDate);
+							datas.push(x.percent);
+						});
+
+						$('#chart-line').remove();
+						$('#chart-line-parent').append('<canvas id="chart-line" class="chart-canvas" height="170"></canvas>');
+
+						cpuUsageMap(labels,datas);
+					},
+				});
+			},2000);
+		});
 	</script>
 
 }

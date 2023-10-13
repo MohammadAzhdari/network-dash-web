@@ -1,4 +1,4 @@
-namespace WebApplication1.Models
+namespace network_dash.Models
 {
     public class ErrorViewModel
     {

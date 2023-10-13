@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using WebApplication1.Models;
+using network_dash.Models;
 
-namespace WebApplication1.Controllers
+namespace network_dash.Controllers
 {
     public class HomeController : Controller
     {
@@ -18,21 +18,20 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-		public IActionResult ServerStatus()
-		{
-			return View();
-		}
-		public IActionResult Bandwidth()
-		{
-			return View();
-		}
-		public IActionResult Health()
-		{
-			return View();
-		}
+        public IActionResult ServerStatus()
+        {
+            return View();
+        }
+        public IActionResult Bandwidth()
+        {
+            return View();
+        }
+        public IActionResult Health()
+        {
+            return View();
+        }
 
-
-		public IActionResult Privacy()
+        public IActionResult Privacy()
         {
             return View();
         }

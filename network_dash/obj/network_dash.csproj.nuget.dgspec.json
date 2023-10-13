@@ -1,29 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Repos\\network-dash\\network_dash\\network_dash.csproj": {}
+    "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\network_dash.csproj": {}
   },
   "projects": {
-    "D:\\Repos\\network-dash\\network_dash\\network_dash.csproj": {
+    "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\network_dash.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Repos\\network-dash\\network_dash\\network_dash.csproj",
+        "projectUniqueName": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\network_dash.csproj",
         "projectName": "network_dash",
-        "projectPath": "D:\\Repos\\network-dash\\network_dash\\network_dash.csproj",
-        "packagesPath": "C:\\Users\\PC0228\\.nuget\\packages\\",
-        "outputPath": "D:\\Repos\\network-dash\\network_dash\\obj\\",
+        "projectPath": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\network_dash.csproj",
+        "packagesPath": "C:\\Users\\Mohammad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PC0228\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mohammad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.pkg.github.com/BorsaLabs/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -40,6 +38,22 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -59,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

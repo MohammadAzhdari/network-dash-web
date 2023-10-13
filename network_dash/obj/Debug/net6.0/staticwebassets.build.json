@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Y0qEfI43FRzv+x3oDiDSGrvz1APN5CHFIVu+Hs4VL2k=",
+  "Hash": "KncmTiELgXXVoiysbQEljR1IPrAncLRecl4ThfK1P2Q=",
   "Source": "network_dash",
   "BasePath": "_content/network_dash",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "network_dash\\wwwroot",
       "Source": "network_dash",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\obj\\Debug\\net6.0\\scopedcss\\bundle\\network_dash.styles.css",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\obj\\Debug\\net6.0\\scopedcss\\bundle\\network_dash.styles.css",
       "SourceId": "network_dash",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "network_dash.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Repos\\network-dash\\network_dash\\obj\\Debug\\net6.0\\scopedcss\\bundle\\network_dash.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\obj\\Debug\\net6.0\\scopedcss\\bundle\\network_dash.styles.css"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\network_dash.bundle.scp.css",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\network_dash.bundle.scp.css",
       "SourceId": "network_dash",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "network_dash.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Repos\\network-dash\\network_dash\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\network_dash.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\network_dash.bundle.scp.css"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\css\\material-dashboard.min.css",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\css\\material-dashboard.min.css",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "css/material-dashboard.min.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\material-dashboard.min.css"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\css\\nucleo-icons.css",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\css\\nucleo-icons.css",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "css/nucleo-icons.css",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\nucleo-icons.css"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\css\\nucleo-svg.css",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\css\\nucleo-svg.css",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "css/nucleo-svg.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\nucleo-svg.css"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\css\\style.css",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\css\\style.css",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "css/style.css",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\favicon.ico",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\icons\\flags\\BR.png",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\img\\icons\\flags\\BR.png",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "img/icons/flags/BR.png",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\img\\icons\\flags\\BR.png"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\icons\\flags\\DE.png",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\img\\icons\\flags\\DE.png",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "img/icons/flags/DE.png",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\img\\icons\\flags\\DE.png"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\icons\\flags\\GB.png",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\img\\icons\\flags\\GB.png",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "img/icons/flags/GB.png",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\img\\icons\\flags\\GB.png"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\icons\\flags\\US.png",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\img\\icons\\flags\\US.png",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "img/icons/flags/US.png",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\img\\icons\\flags\\US.png"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\logo-ct.png",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\img\\logo-ct.png",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "img/logo-ct.png",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\img\\logo-ct.png"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\products\\product-1-min (1).jpg",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\img\\products\\product-1-min (1).jpg",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "img/products/product-1-min (1).jpg",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\img\\products\\product-1-min (1).jpg"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\products\\product-1-min.jpg",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\img\\products\\product-1-min.jpg",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "img/products/product-1-min.jpg",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\img\\products\\product-1-min.jpg"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\products\\product-2-min.jpg",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\img\\products\\product-2-min.jpg",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "img/products/product-2-min.jpg",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\img\\products\\product-2-min.jpg"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\products\\product-3-min.jpg",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\img\\products\\product-3-min.jpg",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "img/products/product-3-min.jpg",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\img\\products\\product-3-min.jpg"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\small-logos\\bootstrap.svg",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\img\\small-logos\\bootstrap.svg",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "img/small-logos/bootstrap.svg",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\img\\small-logos\\bootstrap.svg"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\small-logos\\creative-tim.svg",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\img\\small-logos\\creative-tim.svg",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "img/small-logos/creative-tim.svg",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\img\\small-logos\\creative-tim.svg"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\small-logos\\devto.svg",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\img\\small-logos\\devto.svg",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "img/small-logos/devto.svg",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\img\\small-logos\\devto.svg"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\small-logos\\github.svg",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\img\\small-logos\\github.svg",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "img/small-logos/github.svg",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\img\\small-logos\\github.svg"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\small-logos\\google-webdev.svg",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\img\\small-logos\\google-webdev.svg",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "img/small-logos/google-webdev.svg",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\img\\small-logos\\google-webdev.svg"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\img\\team-3.jpg",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\img\\team-3.jpg",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "img/team-3.jpg",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\img\\team-3.jpg"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\js\\core\\bootstrap.min.js",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\js\\core\\bootstrap.min.js",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "js/core/bootstrap.min.js",
       "AssetKind": "All",
@@ -408,10 +408,27 @@
       "OriginalItemSpec": "wwwroot\\js\\core\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\js\\core\\popper.min.js",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\js\\core\\jquery-3.7.1.min.js",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
+      "BasePath": "_content/network_dash",
+      "RelativePath": "js/core/jquery-3.7.1.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\core\\jquery-3.7.1.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\js\\core\\popper.min.js",
+      "SourceId": "network_dash",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "js/core/popper.min.js",
       "AssetKind": "All",
@@ -425,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\js\\core\\popper.min.js"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\js\\material-dashboard.min.js",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\js\\material-dashboard.min.js",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "js/material-dashboard.min.js",
       "AssetKind": "All",
@@ -442,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\js\\material-dashboard.min.js"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\js\\plugins\\chartjs.min.js",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\js\\plugins\\chartjs.min.js",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "js/plugins/chartjs.min.js",
       "AssetKind": "All",
@@ -459,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\js\\plugins\\chartjs.min.js"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\js\\plugins\\dragula\\dragula.min.js",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\js\\plugins\\dragula\\dragula.min.js",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "js/plugins/dragula/dragula.min.js",
       "AssetKind": "All",
@@ -476,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\js\\plugins\\dragula\\dragula.min.js"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\js\\plugins\\jkanban\\jkanban.js",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\js\\plugins\\jkanban\\jkanban.js",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "js/plugins/jkanban/jkanban.js",
       "AssetKind": "All",
@@ -493,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\js\\plugins\\jkanban\\jkanban.js"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\js\\plugins\\material-dashboard.min.js",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\js\\plugins\\material-dashboard.min.js",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "js/plugins/material-dashboard.min.js",
       "AssetKind": "All",
@@ -510,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\js\\plugins\\material-dashboard.min.js"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\js\\plugins\\perfect-scrollbar.min.js",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\js\\plugins\\perfect-scrollbar.min.js",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "js/plugins/perfect-scrollbar.min.js",
       "AssetKind": "All",
@@ -527,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\js\\plugins\\perfect-scrollbar.min.js"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\js\\plugins\\smooth-scrollbar.min.js",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\js\\plugins\\smooth-scrollbar.min.js",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "js/plugins/smooth-scrollbar.min.js",
       "AssetKind": "All",
@@ -544,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\js\\plugins\\smooth-scrollbar.min.js"
     },
     {
-      "Identity": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\js\\plugins\\world.js",
+      "Identity": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\js\\plugins\\world.js",
       "SourceId": "network_dash",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\network-dash\\network_dash\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohammad\\source\\repos\\network-dash-web\\network_dash\\wwwroot\\",
       "BasePath": "_content/network_dash",
       "RelativePath": "js/plugins/world.js",
       "AssetKind": "All",

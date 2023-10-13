@@ -1,7 +1,11 @@
+using network_dash;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<MonitorContext, MonitorContext>();
 
 var app = builder.Build();
 
