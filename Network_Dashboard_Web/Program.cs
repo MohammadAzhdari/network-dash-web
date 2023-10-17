@@ -1,4 +1,4 @@
-using network_dash;
+using Network_Dashboard_Web;
 
 var builder = WebApplication.CreateBuilder(args);
 

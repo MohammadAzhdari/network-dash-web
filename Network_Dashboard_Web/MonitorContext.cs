@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using network_dash.Models;
+using Network_Dashboard_Web.Models;
 
-namespace network_dash
+namespace Network_Dashboard_Web
 {
     public class MonitorContext : DbContext
     {

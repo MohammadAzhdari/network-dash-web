@@ -5,16 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace network_dash.Models
+namespace ConsoleApp_SystemUsage.Models
 {
-    public class CpuMnt
+    public class RamMnt
     {
         public Guid Id { get; set; }
 
-        public int Percent { get; set; }
+        public int MB { get; set; }
 
         public DateTime CDate { get; set; }
-
-        public string SDate => CDate.ToString("hh:mm:ss");
     }
 }

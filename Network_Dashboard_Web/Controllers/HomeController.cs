@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using network_dash.Models;
+using Network_Dashboard_Web.Models;
 
-namespace network_dash.Controllers
+namespace Network_Dashboard_Web.Controllers
 {
     public class HomeController : Controller
     {

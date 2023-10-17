@@ -2,6 +2,8 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/network_dash/obj/
-/network_dash/bin/
+/Network_Dashboard_Web/obj/
+/Network_Dashboard_Web/bin/
 /.vs
+/ConsoleApp_SystemUsage/bin/
+/ConsoleApp_SystemUsage/obj/

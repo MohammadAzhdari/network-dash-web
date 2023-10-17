@@ -1,4 +1,4 @@
-namespace network_dash.Models
+namespace Network_Dashboard_Web.Models
 {
     public class ErrorViewModel
     {

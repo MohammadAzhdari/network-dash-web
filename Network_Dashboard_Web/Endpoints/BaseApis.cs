@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace network_dash.Endpoints
+namespace Network_Dashboard_Web.Endpoints
 {
     [Route("api")]
     public class BaseApis : Controller
