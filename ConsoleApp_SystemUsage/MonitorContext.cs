@@ -16,6 +16,8 @@ namespace ConsoleApp_SystemUsage
 
         public DbSet<CpuMnt> CpuMnts { get; set; }
         public DbSet<RamMnt> RamMnts { get; set; }
+        public DbSet<DiskMnt> DiskMnts { get; set; }
+        public DbSet<NetworkMnt> NetworkMnts { get; set; }
         public MonitorContext()
         {
 
