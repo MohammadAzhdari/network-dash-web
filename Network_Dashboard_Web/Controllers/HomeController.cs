@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Network_Dashboard_Web.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Network_Dashboard_Web.Controllers
 {

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Network_Dashboard_Web.Endpoints
@@ -13,6 +14,7 @@ namespace Network_Dashboard_Web.Endpoints
             _dbContext = monitorContext;
         }
 
+        [Authorize]
         [HttpGet("GetCpuUsage")]
         public async Task<IActionResult> GetCpuUsageAsync()
         {
