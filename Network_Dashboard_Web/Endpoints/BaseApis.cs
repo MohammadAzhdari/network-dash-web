@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Network_Dashboard_Web.Endpoints
 {
+    [Authorize]
     [Route("api")]
     public class BaseApis : Controller
     {
@@ -14,7 +15,6 @@ namespace Network_Dashboard_Web.Endpoints
             _dbContext = monitorContext;
         }
 
-        [Authorize]
         [HttpGet("GetCpuUsage")]
         public async Task<IActionResult> GetCpuUsageAsync()
         {

@@ -9,5 +9,8 @@ namespace Network_Dashboard_Web.Models.Authentication
 
         [Required(ErrorMessage = "Password is required")]
         public string Password { get; set; }
+        public string ReturnUrl { get; set; }
+        public bool RememberLogin { get; set; }
+
     }
 }

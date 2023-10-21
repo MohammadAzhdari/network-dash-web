@@ -14,19 +14,25 @@ namespace Network_Dashboard_Web.Controllers
             _logger = logger;
         }
 
+        [Authorize]
         public IActionResult Index()
         {
             return View();
         }
 
+        [Authorize]
         public IActionResult ServerStatus()
         {
             return View();
         }
+
+        [Authorize]
         public IActionResult Bandwidth()
         {
             return View();
         }
+
+        [Authorize]
         public IActionResult Health()
         {
             return View();

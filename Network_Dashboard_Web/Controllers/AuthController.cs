@@ -8,6 +8,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 
 namespace Network_Dashboard_Web.Controllers
 {
@@ -30,48 +32,91 @@ namespace Network_Dashboard_Web.Controllers
             _configuration = configuration;
         }
 
-        public IActionResult Index()
+        [HttpGet("login")]
+        public IActionResult Index(string ReturnUrl = "/")
         {
-            return View();
+            ViewBag.Message = TempData["shortMessage"] ?? "".ToString();
+            LoginModel objLoginModel = new LoginModel();
+            objLoginModel.ReturnUrl = ReturnUrl;
+            return View(objLoginModel);
         }
 
         [HttpPost]
         [Route("login")]
-        public async Task<IActionResult> Login([FromBody] LoginModel model)
+        public async Task<IActionResult> Login([FromForm] LoginModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                TempData["shortMessage"] = "Username And Password Is Required";
+                return RedirectToAction("Index");
+            }
             var user = await userManager.FindByNameAsync(model.Username);
             if (user != null && await userManager.CheckPasswordAsync(user, model.Password))
             {
                 var userRoles = await userManager.GetRolesAsync(user);
 
-                var authClaims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, user.UserName),
-                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                };
+                //var authClaims = new List<Claim>
+                //{
+                //    new Claim(ClaimTypes.Name, user.UserName),
+                //    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                //};
 
+                //foreach (var userRole in userRoles)
+                //{
+                //    authClaims.Add(new Claim(ClaimTypes.Role, userRole));
+                //}
+
+                //var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));
+
+                //var token = new JwtSecurityToken(
+                //    issuer: _configuration["JWT:ValidIssuer"],
+                //    audience: _configuration["JWT:ValidAudience"],
+                //    expires: DateTime.Now.AddHours(3),
+                //    claims: authClaims,
+                //    signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
+                //    );
+
+                //return Ok(new
+                //{
+                //    token = new JwtSecurityTokenHandler().WriteToken(token),
+                //    expiration = token.ValidTo
+                //});
+
+                //A claim is a statement about a subject by an issuer and
+                //represent attributes of the subject that are useful in the context of authentication and authorization operations.
+                var claims = new List<Claim>() {
+                    new Claim(ClaimTypes.Name,user.UserName),
+                    //new Claim("FavoriteDrink","Tea")
+                };
                 foreach (var userRole in userRoles)
                 {
-                    authClaims.Add(new Claim(ClaimTypes.Role, userRole));
+                    claims.Add(new Claim(ClaimTypes.Role, userRole));
                 }
+                //Initialize a new instance of the ClaimsIdentity with the claims and authentication scheme
+                var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                //Initialize a new instance of the ClaimsPrincipal with ClaimsIdentity
+                var principal = new ClaimsPrincipal(identity);
+                //SignInAsync is a Extension method for Sign in a principal for the specified scheme.
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                    principal, new AuthenticationProperties() { IsPersistent = model.RememberLogin });
 
-                var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));
-
-                var token = new JwtSecurityToken(
-                    issuer: _configuration["JWT:ValidIssuer"],
-                    audience: _configuration["JWT:ValidAudience"],
-                    expires: DateTime.Now.AddHours(3),
-                    claims: authClaims,
-                    signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
-                    );
-
-                return Ok(new
-                {
-                    token = new JwtSecurityTokenHandler().WriteToken(token),
-                    expiration = token.ValidTo
-                });
+                return LocalRedirect(model.ReturnUrl);
             }
-            return Unauthorized();
+            else
+            {
+                //Add logic here to display some message to user
+                TempData["shortMessage"] = "Username Or Password Is Incorrect";
+                return RedirectToAction("Index");
+            }
+        }
+
+        [Route("logout")]
+        public async Task<IActionResult> LogOut()
+        {
+            //SignOutAsync is Extension method for SignOut
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            //Redirect to home page
+            return LocalRedirect("/");
         }
 
         [HttpPost]
@@ -120,7 +165,7 @@ namespace Network_Dashboard_Web.Controllers
             if (!result.Succeeded)
             {
                 var message = "";
-                foreach(var msg in result.Errors)
+                foreach (var msg in result.Errors)
                 {
                     message += msg.Description + "\r\n";
                 }
