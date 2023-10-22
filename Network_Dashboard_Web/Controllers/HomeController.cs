@@ -2,9 +2,13 @@
 using System.Diagnostics;
 using Network_Dashboard_Web.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Server.HttpSys;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using System.Security.Claims;
 
 namespace Network_Dashboard_Web.Controllers
 {
+    [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme)]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -14,25 +18,21 @@ namespace Network_Dashboard_Web.Controllers
             _logger = logger;
         }
 
-        [Authorize]
         public IActionResult Index()
         {
             return View();
         }
 
-        [Authorize]
         public IActionResult ServerStatus()
         {
             return View();
         }
 
-        [Authorize]
         public IActionResult Bandwidth()
         {
             return View();
         }
 
-        [Authorize]
         public IActionResult Health()
         {
             return View();

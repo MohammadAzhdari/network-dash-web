@@ -14,5 +14,7 @@ namespace Network_Dashboard_Web.Models
         public int MB { get; set; }
 
         public DateTime CDate { get; set; }
+        public string SDate => CDate.ToString("hh:mm:ss");
+
     }
 }

@@ -2,6 +2,7 @@
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Drawing.Text;
 using System.Net.NetworkInformation;
 using System.Runtime.InteropServices;
 
@@ -11,6 +12,8 @@ static extern bool GetProcessIoCounters(IntPtr ProcessHandle, out IO_COUNTERS Io
 
 PerformanceCounter cpuCounter = new("Processor", "% Processor Time", "_Total");
 PerformanceCounter ramCounter = new("Memory", "Available MBytes");
+
+var db = new MonitorContext();
 #endregion
 
 #region Start Thread
@@ -27,13 +30,37 @@ Console.ReadLine();
 #endregion
 
 #region Methods
-float GetCpuUsageForProcess() =>
-     cpuCounter.NextValue();
+async Task GetCpuUsageForProcess()
+{
+    var result = cpuCounter.NextValue();
 
-float GetAvailableRAM() =>
-    ramCounter.NextValue();
+    Console.WriteLine($"{DateTime.Now} --- CPU: {result}%");
 
-double GetProcessDiskUsage()
+    await db.CpuMnts.AddAsync(new()
+    {
+        Id = Guid.NewGuid(),
+        Percent = (int)Math.Floor(result + 0.5),
+        CDate = DateTime.Now
+    });
+    await db.SaveChangesAsync();
+}
+
+async Task GetAvailableRAM()
+{
+    var result = ramCounter.NextValue();
+
+    Console.WriteLine($"{DateTime.Now} --- RAM: {result}MB");
+
+    await db.RamMnts.AddAsync(new()
+    {
+        Id = Guid.NewGuid(),
+        MB = (int)Math.Floor(result + 0.5),
+        CDate = DateTime.Now
+    });
+    await db.SaveChangesAsync();
+}
+
+async Task GetProcessDiskUsage()
 {
     Process[] process = Process.GetProcesses();
 
@@ -52,7 +79,7 @@ double GetProcessDiskUsage()
         }
     }
 
-    Thread.Sleep(1000);
+    Thread.Sleep(500);
 
     double totalBytes2 = 0;
     foreach (var prss in process)
@@ -69,10 +96,20 @@ double GetProcessDiskUsage()
         }
     }
 
-    return Math.Round(totalBytes2 - totalBytes1, 2);
+    var result = Math.Round(totalBytes2 - totalBytes1, 2);
+
+    Console.WriteLine($"{DateTime.Now} --- I/O Disk Usage: {result} MB/s");
+
+    await db.DiskMnts.AddAsync(new()
+    {
+        Id = Guid.NewGuid(),
+        MBPerSecond = result,
+        CDate = DateTime.Now
+    });
+    await db.SaveChangesAsync();
 }
 
-double GetNetworkUsage()
+async Task GetNetworkUsage()
 {
     const int numberOfIterations = 10;
 
@@ -99,59 +136,34 @@ double GetNetworkUsage()
 
     }
 
-    return Math.Round(8 * (sendSum + receiveSum) / (bandwidth * numberOfIterations) * 100, 2);
+    var result = Math.Round(8 * (sendSum + receiveSum) / (bandwidth * numberOfIterations) * 100, 2);
+
+    Console.WriteLine($"{DateTime.Now} --- Network Usage: {result} MB/s");
+
+    await db.NetworkMnts.AddAsync(new()
+    {
+        Id = Guid.NewGuid(),
+        MBPerSecond = result,
+        CDate = DateTime.Now
+    });
+    await db.SaveChangesAsync();
 }
 
 #endregion
 
 async void TraceCpu()
 {
-    var db = new MonitorContext();
 
     Console.WriteLine("Thread Start");
 
     while (true)
     {
-        var disk_usage = GetProcessDiskUsage();
-        var cpu_usage = GetCpuUsageForProcess();
-        var ram_usage = GetAvailableRAM();
-        var network_usage = GetNetworkUsage();
+        GetProcessDiskUsage();
+        GetCpuUsageForProcess();
+        GetAvailableRAM();
+        GetNetworkUsage();
 
-        Console.WriteLine($"\r\n{DateTime.Now:yyyy-MM-dd HH:mm:ss}");
-        Console.WriteLine($"CPU: {cpu_usage}%");
-        Console.WriteLine($"RAM: {ram_usage}MB");
-        Console.WriteLine($"I/O Disk Usage: {disk_usage} MB/s");
-        Console.WriteLine($"Network Usage: {network_usage} MB/s");
-        Console.WriteLine("----------------------------");
-
-        await db.CpuMnts.AddAsync(new()
-        {
-            Id = Guid.NewGuid(),
-            Percent = (int)Math.Floor(cpu_usage + 0.5),
-            CDate = DateTime.Now
-        });
-        await db.RamMnts.AddAsync(new()
-        {
-            Id = Guid.NewGuid(),
-            MB = (int)Math.Floor(ram_usage + 0.5),
-            CDate = DateTime.Now
-        });
-        await db.DiskMnts.AddAsync(new()
-        {
-            Id = Guid.NewGuid(),
-            MBPerSecond = disk_usage,
-            CDate = DateTime.Now
-        });
-        await db.NetworkMnts.AddAsync(new()
-        {
-            Id = Guid.NewGuid(),
-            MBPerSecond = network_usage,
-            CDate = DateTime.Now
-        });
-
-        await db.SaveChangesAsync();
-
-        Thread.Sleep(1000);
+        Thread.Sleep(500);
     }
 }
 

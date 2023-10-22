@@ -10,6 +10,7 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace Network_Dashboard_Web.Controllers
 {
@@ -55,52 +56,52 @@ namespace Network_Dashboard_Web.Controllers
             {
                 var userRoles = await userManager.GetRolesAsync(user);
 
-                //var authClaims = new List<Claim>
-                //{
-                //    new Claim(ClaimTypes.Name, user.UserName),
-                //    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                //};
-
-                //foreach (var userRole in userRoles)
-                //{
-                //    authClaims.Add(new Claim(ClaimTypes.Role, userRole));
-                //}
-
-                //var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));
-
-                //var token = new JwtSecurityToken(
-                //    issuer: _configuration["JWT:ValidIssuer"],
-                //    audience: _configuration["JWT:ValidAudience"],
-                //    expires: DateTime.Now.AddHours(3),
-                //    claims: authClaims,
-                //    signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
-                //    );
-
-                //return Ok(new
-                //{
-                //    token = new JwtSecurityTokenHandler().WriteToken(token),
-                //    expiration = token.ValidTo
-                //});
-
-                //A claim is a statement about a subject by an issuer and
-                //represent attributes of the subject that are useful in the context of authentication and authorization operations.
-                var claims = new List<Claim>() {
-                    new Claim(ClaimTypes.Name,user.UserName),
-                    //new Claim("FavoriteDrink","Tea")
+                var authClaims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, user.UserName),
+                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 };
+
                 foreach (var userRole in userRoles)
                 {
-                    claims.Add(new Claim(ClaimTypes.Role, userRole));
+                    authClaims.Add(new Claim(ClaimTypes.Role, userRole));
                 }
-                //Initialize a new instance of the ClaimsIdentity with the claims and authentication scheme
-                var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                //Initialize a new instance of the ClaimsPrincipal with ClaimsIdentity
+
+                var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));
+
+                var token = new JwtSecurityToken(
+                    issuer: _configuration["JWT:ValidIssuer"],
+                    audience: _configuration["JWT:ValidAudience"],
+                    expires: DateTime.Now.AddHours(3),
+                    claims: authClaims,
+                    signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
+                    );
+
+            // also add cookie auth for Swagger Access
+            var identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme, ClaimTypes.Name, ClaimTypes.Role);
+                identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, user.UserName));
+                identity.AddClaim(new Claim(ClaimTypes.Name, user.UserName));
                 var principal = new ClaimsPrincipal(identity);
-                //SignInAsync is a Extension method for Sign in a principal for the specified scheme.
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
-                    principal, new AuthenticationProperties() { IsPersistent = model.RememberLogin });
+
+                await HttpContext.SignInAsync(
+                    CookieAuthenticationDefaults.AuthenticationScheme,
+                    principal,
+                    new AuthenticationProperties
+                    {
+                        IsPersistent = true,
+                        AllowRefresh = true,
+                        ExpiresUtc = DateTime.UtcNow.AddDays(1)
+                    });
+
+                Thread.CurrentPrincipal = principal;
 
                 return LocalRedirect(model.ReturnUrl);
+
+                return Ok(new
+                {
+                    token = new JwtSecurityTokenHandler().WriteToken(token),
+                    expiration = token.ValidTo
+                });
             }
             else
             {
